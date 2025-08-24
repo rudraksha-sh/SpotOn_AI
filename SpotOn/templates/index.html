@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpotOn.AI - News Analyzer</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="container">
+
+    <!-- Header Section -->
+    <div class="header-section">
+        <h1 class="main-title">SpotOn.AI</h1>
+        <h2 class="sub-title">AI News Analyzer</h2>
+
+        <div class="features">
+            <div class="feature-line">⚡ Fast Summaries</div>
+            <div class="feature-line">🧐 Bias Detection</div>
+            <div class="feature-line">🔒 Privacy & Security Focused</div>
+        </div>
+    </div>
+
+    <!-- Input -->
+    <textarea id="newsInput" placeholder="Paste article text or link"></textarea>
+
+    <!-- Mode Buttons -->
+    <div class="mode-buttons">
+        <button class="mode-btn active" data-mode="neutral">🌀 Neutral</button>
+        <button class="mode-btn" data-mode="facts">📌 Facts Only</button>
+        <button class="mode-btn" data-mode="eli10">👶 ELI10</button>
+    </div>
+
+    <!-- Analyze -->
+    <button id="analyzeBtn">⚡ Analyze</button>
+
+    <!-- Loading & Results -->
+    <div id="summaryLoading" class="loading">Analyzing summary...</div>
+    <div id="summaryResult" class="result"></div>
+
+    <div id="biasLoading" class="loading">Analyzing bias...</div>
+    <div id="biasResult" class="result"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
